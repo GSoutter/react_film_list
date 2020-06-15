@@ -4,8 +4,8 @@ const FilmItem = (props) => {
 
 
     return (
-      <div>
-        <li><a href={props.film.url}>{props.film.name}</a></li>
+      <div class="film-item">
+        <a href={props.film.url}>{props.film.name}</a>
       </div>
     )
 
