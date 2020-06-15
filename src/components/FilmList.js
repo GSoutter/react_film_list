@@ -10,7 +10,6 @@ const FilmList = (props) => {
   return (
     <Fragment>
       {filmNodes}
-      <footer> <a href="https://www.imdb.com/calendar/?region=gb">View More Upcoming Films</a></footer>
     </Fragment>
   )
 
