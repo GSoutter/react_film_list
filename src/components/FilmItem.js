@@ -1,15 +1,14 @@
 import React, {Component} from 'react';
 
-class FilmItem extends Component {
+const FilmItem = (props) => {
 
 
-  render(){
     return (
       <div>
-        <h2>Film Item</h2>
+        <li><a href={props.film.url}>{props.film.name}</a></li>
       </div>
     )
-  }
+
 }
 
 export default FilmItem;
