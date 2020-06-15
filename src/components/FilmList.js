@@ -1,22 +1,19 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import FilmItem from './FilmItem.js'
 
-class FilmList extends Component {
+const FilmList = (props) => {
 
+  const filmNodes = props.films.map((film) => {
+    return <FilmItem film= {film} key={film.id} />
+  });
 
-  render(){
-    return (
-      <div>
-        <h2>FilmList</h2>
-        <FilmItem/>
-        <FilmItem/>
-        <FilmItem/>
-        <FilmItem/>
+  return (
+    <Fragment>
+      {filmNodes}
+      <footer> <a href="https://www.imdb.com/calendar/?region=gb">View More Upcoming Films</a></footer>
+    </Fragment>
+  )
 
-        <footer> <a href="https://www.imdb.com/calendar/?region=gb">View More Upcoming Films</a></footer>
-      </div>
-    )
-  }
 }
 
 export default FilmList;
